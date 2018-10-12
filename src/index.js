@@ -3,10 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import DemoVideo from './components/DemoVideo';
 import styled from 'styled-components';
-import DemoAudio from './components/DemoAudio';
 
 export const BgCover = styled.div`
 	background-image: url(images/backgroun.jpg);
@@ -22,15 +19,8 @@ export const BgCover = styled.div`
 `;
 
 ReactDOM.render(
-	<Router>
-		<BgCover>
-			<Switch>
-				<Route exact path="/" component={App} />
-				<Route path="/demovideo" component={DemoVideo} />
-				<Route path="/demoaudio" component={DemoAudio} />
-			</Switch>
-		</BgCover>
-	</Router>,
+	<BgCover><App /></BgCover>
+,
 
 	document.getElementById('root')
 );

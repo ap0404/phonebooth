@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import ReactDOM from 'react-dom';
 import { ScaleLoader } from 'react-spinners';
@@ -40,14 +39,14 @@ class DemoVideo extends Component {
 		const { loading } = this.state;
 		return (
 			<div>
-				<Embed ref="iframe" src="https://www.youtube.com/v/tgbNymZ7vqY" />
+				<Embed ref="iframe" src="https://www.youtube.com/v/T58NGMrUp0M" />
 				{loading ? (
 					<LoaderWrapper>
-						<ScaleLoader sizeUnit={'px'} size={100} color={'lightblue'} />
+						<ScaleLoader sizeUnit={'px'} size={100} color={'green'} />
 					</LoaderWrapper>
 				) : (
 					<DemoAudioRouteWrapper>
-						<Link to="/demoaudio">skip</Link>
+						<div onClick={this.props.showAudioPage}>skip</div>
 					</DemoAudioRouteWrapper>
 				)}
 			</div>
